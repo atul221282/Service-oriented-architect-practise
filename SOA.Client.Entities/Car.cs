@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Core.Common.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentValidation;
 
 namespace SOA.Client.Entities
 {
-    public class Car
+    public class Car : ObjectBase
     {
         private long _id;
         private string _description;
@@ -49,6 +51,11 @@ namespace SOA.Client.Entities
         {
             get { return _currentlyRented; }
             set { _currentlyRented = value; }
+        }
+
+        protected override IValidator GetValidator()
+        {
+            return base.GetValidator();
         }
 
     }

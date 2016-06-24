@@ -49,9 +49,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="Reservation.cs" />
+    <Compile Include="Validators\CarValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{8D8D95A3-0CDE-4D48-8EE8-21830B89D2BA}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-﻿using Core.Common.Contract;
+﻿using Core.Common.Contracts;
 using Core.Common.Core;
 using System;
 using System.Collections.Generic;
