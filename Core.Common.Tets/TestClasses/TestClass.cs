@@ -74,6 +74,8 @@ namespace Core.Common.Tests
             public TestClassValidator()
             {
                 RuleFor(obj => obj.StringProp).NotEmpty();
+                RuleFor(x => x.DirtyProp.ToLowerInvariant()).NotEqual(x => x.StringProp.ToLowerInvariant())
+                    .WithMessage("\"Dirty prop\" should not be equal to \"String prop\"");
             }
         }
 

@@ -4,6 +4,7 @@ using Core.Common.Tests;
 using System.ComponentModel;
 using Core.Common.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Core.Common.Tets
 {
@@ -62,6 +63,12 @@ namespace Core.Common.Tets
             objTest.StringProp = "Should be vald now";
             objTest.DirtyProp = "Should be dirty now";
             Assert.IsTrue(objTest.IsValid);
+
+            objTest.StringProp = "Should be dirty now";
+            objTest.DirtyProp = "Should Be Dirty Now";
+            Assert.IsFalse(objTest.IsValid);
+            Assert.IsTrue(objTest.ValidationErrors.Count() > 0, "DirtyProp is equal to StringProp");
+            Assert.AreEqual(objTest.ValidationErrors.First().ErrorMessage, "\"Dirty prop\" should not be equal to \"String prop\"");
         }
 
         [TestMethod]
