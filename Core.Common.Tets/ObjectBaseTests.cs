@@ -69,6 +69,8 @@ namespace Core.Common.Tets
             Assert.IsFalse(objTest.IsValid);
             Assert.IsTrue(objTest.ValidationErrors.Count() > 0, "DirtyProp is equal to StringProp");
             Assert.AreEqual(objTest.ValidationErrors.First().ErrorMessage, "\"Dirty prop\" should not be equal to \"String prop\"");
+
+            var list = objTest.ValidationErrors.ToList();
         }
 
         [TestMethod]

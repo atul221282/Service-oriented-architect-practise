@@ -1,6 +1,7 @@
 ﻿using System;
 using Core.Common.Core;
 using FluentValidation;
+using Core.Common.Utils;
 
 namespace Core.Common.Tests
 {
@@ -75,7 +76,8 @@ namespace Core.Common.Tests
             {
                 RuleFor(obj => obj.StringProp).NotEmpty();
                 RuleFor(x => x.DirtyProp.ToLowerInvariant()).NotEqual(x => x.StringProp.ToLowerInvariant())
-                    .WithMessage("\"Dirty prop\" should not be equal to \"String prop\"");
+                    .WithMessage("\"Dirty prop\" should not be equal to \"String prop\"")
+                    .WithName("DirtyProp");
             }
         }
 
