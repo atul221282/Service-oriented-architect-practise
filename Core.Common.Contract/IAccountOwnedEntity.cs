@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOA.Business.Entities
+namespace Core.Common.Contract
 {
-    public class Class1
+    public interface IAccountOwnedEntity
     {
+        long OwnerAccount { get; }
     }
 }

@@ -6,11 +6,11 @@ using System.Runtime.Serialization;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SOA.Business.Entities")]
+[assembly: AssemblyTitle("SOA.Client.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SOA.Business.Entities")]
+[assembly: AssemblyProduct("SOA.Client.Entities")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Runtime.Serialization;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ab94ef71-93de-4107-98e6-2a0b17e2e5bb")]
+[assembly: Guid("05823604-75c4-41a6-be81-7c7d64e252d2")]
 
 // Version information for an assembly consists of the following four values:
 //
