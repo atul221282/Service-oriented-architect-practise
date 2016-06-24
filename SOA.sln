@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Contracts", "Co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{CF144452-145A-4F41-ACF1-FE33FBCFD0D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common.Tets", "Core.Common.Tets\Core.Common.Tets.csproj", "{134703E2-3B70-4C51-9448-E1583EA78AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FB984039-658F-48E8-BC4E-5971F276B091}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB984039-658F-48E8-BC4E-5971F276B091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB984039-658F-48E8-BC4E-5971F276B091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134703E2-3B70-4C51-9448-E1583EA78AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134703E2-3B70-4C51-9448-E1583EA78AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134703E2-3B70-4C51-9448-E1583EA78AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134703E2-3B70-4C51-9448-E1583EA78AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
