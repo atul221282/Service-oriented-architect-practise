@@ -38,6 +38,13 @@ namespace Core.Common.Tests
             }
         }
 
+        /// <summary>
+        /// Gets or sets the string property.
+        /// This prop got validation of required but it wont set the state to dirty for an object
+        /// </summary>
+        /// <value>
+        /// The string property.
+        /// </value>
         public string StringProp
         {
             get { return _StringProp; }
