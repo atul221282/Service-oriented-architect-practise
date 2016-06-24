@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOA.Client.Entities
+namespace CarRental.Client.Entities
 {
     public class Rental
     {

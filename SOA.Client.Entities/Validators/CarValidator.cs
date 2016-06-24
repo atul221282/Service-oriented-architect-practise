@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOA.Client.Entities.Validators
+namespace CarRental.Client.Entities.Validators
 {
     public class CarValidator:AbstractValidator<Car>
     {

@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOA.Business.Entities
+namespace CarRental.Business.Entities
 {
     [DataContract]
     public class Rental : EntityBase, IIdentifiableEntity,IAccountOwnedEntity

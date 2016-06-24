@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOA.Business.Entities", "SOA.Business.Entities\SOA.Business.Entities.csproj", "{AB94EF71-93DE-4107-98E6-2A0B17E2E5BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Business.Entities", "SOA.Business.Entities\CarRental.Business.Entities.csproj", "{AB94EF71-93DE-4107-98E6-2A0B17E2E5BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOA.Client.Entities", "SOA.Client.Entities\SOA.Client.Entities.csproj", "{05823604-75C4-41A6-BE81-7C7D64E252D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRental.Client.Entities", "SOA.Client.Entities\CarRental.Client.Entities.csproj", "{05823604-75C4-41A6-BE81-7C7D64E252D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{08C90880-9BC0-49B0-9183-85F2BE0E1545}"
 EndProject

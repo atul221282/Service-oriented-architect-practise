@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
 
-namespace SOA.Client.Entities
+namespace CarRental.Client.Entities
 {
     public class Car : ObjectBase
     {
