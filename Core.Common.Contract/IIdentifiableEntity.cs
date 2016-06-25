@@ -14,6 +14,6 @@ namespace Core.Common.Contracts
         /// <value>
         /// The entity identifier.
         /// </value>
-        long EntityId { get; set; }
+        long? EntityId { get; set; }
     }
 }

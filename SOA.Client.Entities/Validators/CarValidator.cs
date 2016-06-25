@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace CarRental.Client.Entities.Validators
 {
-    public class CarValidator:AbstractValidator<Car>
+    public class CarValidator : AbstractValidator<Car>
     {
         public CarValidator()
         {
             RuleFor(x => x.Description).NotEmpty();
             RuleFor(x => x.Color).NotEmpty();
             RuleFor(x => x.RentalPrice).GreaterThan(0);
-            RuleFor(x => x.Year).GreaterThan(2000).LessThan(DateTime.Now.Year);
+            RuleFor(x => x.Year).NotNull().GreaterThan(DateTimeOffset.Now);
         }
     }
 }

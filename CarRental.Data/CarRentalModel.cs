@@ -1,12 +1,15 @@
 namespace CarRental.Data
 {
+    using Business.Entities;
+    using Core.Common.Contracts;
     using System;
     using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
     using System.Linq;
-
+    using System.Runtime.Serialization;
     public class CarRentalContext : DbContext
     {
-        // Your context has been configured to use a 'CarRentalModel' connection string from your application's 
+        // Your context has been configured to use a 'CarRental' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
         // 'CarRental.Data.CarRentalModel' database on your LocalDb instance. 
         // 
@@ -21,6 +24,15 @@ namespace CarRental.Data
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<Account> AccountSet { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Ignore<ExtensionDataObject>();
+            modelBuilder.Ignore<IIdentifiableEntity>();
+        }
     }
 
     

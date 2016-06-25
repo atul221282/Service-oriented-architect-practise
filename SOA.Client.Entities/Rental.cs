@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Common.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,44 +8,74 @@ using System.Threading.Tasks;
 
 namespace CarRental.Client.Entities
 {
-    public class Rental
+    public class Rental : ObjectBase
     {
-        private long _id;
+
         private long _accountid;
         private long _carId;
-        private DateTime _dateRented;
-        private DateTime _dateDue;
-        private DateTime? _dateReturned;
+        private DateTimeOffset _dateRented;
+        private DateTimeOffset _dateDue;
+        private DateTimeOffset? _dateReturned;
 
-        public long Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
         public long AccountId
         {
             get { return _accountid; }
-            set { _id = value; }
+            set
+            {
+                if (_accountid != value)
+                {
+                    _accountid = value;
+                    OnPropertyChanged(() => AccountId);
+                }
+            }
         }
         public long CarId
         {
             get { return _carId; }
-            set { _carId = value; }
+            set
+            {
+                if (_carId != value)
+                {
+                    _carId = value;
+                    OnPropertyChanged(() => CarId);
+                }
+            }
         }
-        public DateTime DateRented
+        public DateTimeOffset DateRented
         {
             get { return _dateRented; }
-            set { _dateRented = value; }
+            set
+            {
+                if (_dateRented != value)
+                {
+                    _dateRented = value;
+                    OnPropertyChanged(() => DateRented);
+                }
+            }
         }
-        public DateTime DateDue
+        public DateTimeOffset DateDue
         {
             get { return _dateDue; }
-            set { _dateDue = value; }
+            set
+            {
+                if (_dateDue != value)
+                {
+                    _dateDue = value;
+                    OnPropertyChanged(() => DateDue);
+                }
+            }
         }
-        public DateTime? Datereturned
+        public DateTimeOffset? Datereturned
         {
             get { return _dateReturned; }
-            set { _dateReturned = value; }
+            set
+            {
+                if (_dateRented != value)
+                {
+                    _dateReturned = value;
+                    OnPropertyChanged(() => Datereturned);
+                }
+            }
         }
 
     }

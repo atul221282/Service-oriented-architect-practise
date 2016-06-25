@@ -20,11 +20,81 @@ namespace Core.Common.Core
 {
     public abstract class ObjectBase : NotificationObject, IDirtyCapable, IExtensibleDataObject, IDataErrorInfo
     {
+        private long _id;
+        private string _createdBy;
+        private DateTimeOffset? _createdOn;
+        private string _updatedBy;
+        private DateTimeOffset? _updatedOn;
+
         public ObjectBase()
         {
             _Validator = GetValidator();
             Validate();
         }
+
+
+        public long Id
+        {
+            get { return _id; }
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    OnPropertyChanged(() => Id);
+                }
+            }
+        }
+        public string CreatedBy
+        {
+            get { return _createdBy; }
+            set
+            {
+                if (_createdBy != null)
+                {
+                    _createdBy = value;
+                    OnPropertyChanged(() => CreatedBy);
+                }
+
+            }
+        }
+        public DateTimeOffset? CreatedOn
+        {
+            get { return _createdOn; }
+            set
+            {
+                if (_createdOn != null)
+                {
+                    _createdOn = value;
+                    OnPropertyChanged(() => CreatedOn);
+                }
+            }
+        }
+        public string UpdatedBy
+        {
+            get { return _updatedBy; }
+            set
+            {
+                if (_updatedBy != null)
+                {
+                    _updatedBy = value;
+                    OnPropertyChanged(() => UpdatedBy);
+                }
+            }
+        }
+        public DateTimeOffset? UpdatedOn
+        {
+            get { return _updatedOn; }
+            set
+            {
+                if (_updatedOn != null)
+                {
+                    _updatedOn = value;
+                    OnPropertyChanged(() => UpdatedOn);
+                }
+            }
+        }
+
 
         protected bool _IsDirty = false;
         protected IValidator _Validator = null;

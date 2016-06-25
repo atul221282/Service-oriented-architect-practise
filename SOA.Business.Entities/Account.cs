@@ -10,10 +10,8 @@ using System.Threading.Tasks;
 namespace CarRental.Business.Entities
 {
     [DataContract]
-    public class Account : EntityBase, IIdentifiableEntity
+    public class Account : EntityBase
     {
-        [DataMember]
-        public long Id { get; set; }
         [DataMember]
         public string LoginEmail { get; set; }
         [DataMember]
@@ -29,19 +27,7 @@ namespace CarRental.Business.Entities
         [DataMember]
         public string CreditCard { get; set; }
         [DataMember]
-        public string ExpDate { get; set; }
+        public DateTimeOffset? ExpiryDate { get; set; }
 
-        public long EntityId
-        {
-            get
-            {
-                return Id;
-            }
-
-            set
-            {
-                Id = value;
-            }
-        }
     }
 }

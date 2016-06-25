@@ -13,16 +13,13 @@ namespace CarRental.Business.Entities
     public class Car : EntityBase, IIdentifiableEntity
     {
         [DataMember]
-        public long Id { get; set; }
-
-        [DataMember]
         public string Description { get; set; }
 
         [DataMember]
         public string Color { get; set; }
 
         [DataMember]
-        public int Year { get; set; }
+        public DateTimeOffset Year { get; set; }
 
         [DataMember]
         public decimal RentalPrice { get; set; }
@@ -30,17 +27,5 @@ namespace CarRental.Business.Entities
         [DataMember]
         public bool CurrentlyRented { get; set; }
 
-        public long EntityId
-        {
-            get
-            {
-                return Id;
-            }
-
-            set
-            {
-                Id = value;
-            }
-        }
     }
 }

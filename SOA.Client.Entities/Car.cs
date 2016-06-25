@@ -10,47 +10,75 @@ namespace CarRental.Client.Entities
 {
     public class Car : ObjectBase
     {
-        private long _id;
+
         private string _description;
         private string _color;
-        private int _year;
+        private DateTimeOffset _year;
         private decimal _rentalPrice;
         private bool _currentlyRented;
-
-        public long Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
 
         public string Description
         {
             get { return _description; }
-            set { _description = value; }
+            set
+            {
+                if (_description != value)
+                {
+                    _description = value;
+                    OnPropertyChanged(() => Description);
+                }
+            }
         }
 
         public string Color
         {
             get { return _color; }
-            set { _color = value; }
+            set
+            {
+                if (_color != value)
+                {
+                    _color = value;
+                    OnPropertyChanged(() => Color);
+                }
+
+            }
         }
 
-        public int Year
+        public DateTimeOffset Year
         {
             get { return _year; }
-            set { _year = value; }
+            set
+            {
+                if (_year != value)
+                {
+                    _year = value;
+                    OnPropertyChanged(() => Year);
+                }
+            }
         }
 
         public decimal RentalPrice
         {
             get { return _rentalPrice; }
-            set { _rentalPrice = value; }
+            set {
+                if (_rentalPrice != value)
+                {
+                    _rentalPrice = value;
+                    OnPropertyChanged(() => RentalPrice);
+                }
+            }
         }
 
         public bool CurrentlyRented
         {
             get { return _currentlyRented; }
-            set { _currentlyRented = value; }
+            set {
+                if (_currentlyRented != value)
+                {
+                    _currentlyRented = value;
+                    OnPropertyChanged(() => CurrentlyRented);
+                }
+            }
         }
 
         protected override IValidator GetValidator()

@@ -10,31 +10,16 @@ using System.Threading.Tasks;
 namespace CarRental.Business.Entities
 {
     [DataContract]
-    public class Reservation : EntityBase, IIdentifiableEntity, IAccountOwnedEntity
+    public class Reservation : EntityBase, IAccountOwnedEntity
     {
-        [DataMember]
-        public long Id { get; set; }
         [DataMember]
         public long AccountId { get; set; }
         [DataMember]
         public long CarId { get; set; }
         [DataMember]
-        public DateTime RentalDate { get; set; }
+        public DateTimeOffset RentalDate { get; set; }
         [DataMember]
-        public DateTime ReturnDate { get; set; }
-
-        public long EntityId
-        {
-            get
-            {
-                return Id;
-            }
-
-            set
-            {
-                Id = value;
-            }
-        }
+        public DateTimeOffset ReturnDate { get; set; }
 
         long IAccountOwnedEntity.OwnerAccount
         {

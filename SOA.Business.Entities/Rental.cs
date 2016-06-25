@@ -12,31 +12,18 @@ namespace CarRental.Business.Entities
     [DataContract]
     public class Rental : EntityBase, IIdentifiableEntity,IAccountOwnedEntity
     {
-        [DataMember]
-        public long Id { get; set; }
+     
         [DataMember]
         public long AccountId { get; set; }
         [DataMember]
         public long CarId { get; set; }
         [DataMember]
-        public DateTime DateRented { get; set; }
+        public DateTimeOffset DateRented { get; set; }
         [DataMember]
-        public DateTime DateDue { get; set; }
+        public DateTimeOffset DateDue { get; set; }
         [DataMember]
-        public DateTime? Datereturned { get; set; }
-        public long EntityId
-        {
-            get
-            {
-                return Id;
-            }
-
-            set
-            {
-                Id = value;
-            }
-        }
-
+        public DateTimeOffset? Datereturned { get; set; }
+      
         long IAccountOwnedEntity.OwnerAccount
         {
             get

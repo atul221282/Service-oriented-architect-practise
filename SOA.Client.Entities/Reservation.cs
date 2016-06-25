@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Common.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -8,38 +9,62 @@ using System.Threading.Tasks;
 namespace CarRental.Client.Entities
 {
 
-    public class Reservation
+    public class Reservation : ObjectBase
     {
-        private long _id;
         private long _accountId;
         private long _carId;
-        private DateTime _rentalDate;
-        private DateTime _returnDate;
+        private DateTimeOffset _rentalDate;
+        private DateTimeOffset _returnDate;
 
-        public long Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+
         public long AccountId
         {
             get { return _accountId; }
-            set { _accountId = value; }
+            set
+            {
+                if (_accountId != value)
+                {
+                    _accountId = value;
+                    OnPropertyChanged(() => AccountId);
+                }
+            }
         }
         public long CarId
         {
             get { return _carId; }
-            set { _carId = value; }
+            set
+            {
+                if (_carId != value)
+                {
+                    _carId = value;
+                    OnPropertyChanged(() => CarId);
+                }
+            }
         }
-        public DateTime RentalDate
+        public DateTimeOffset RentalDate
         {
             get { return _rentalDate; }
-            set { _rentalDate = value; }
+            set
+            {
+                if (_rentalDate != value)
+                {
+                    _rentalDate = value;
+                    OnPropertyChanged(() => RentalDate);
+                }
+            }
+
         }
-        public DateTime ReturnDate
+        public DateTimeOffset ReturnDate
         {
             get { return _returnDate; }
-            set { _returnDate = value; }
+            set
+            {
+                if (_returnDate != value)
+                {
+                    _returnDate = value;
+                    OnPropertyChanged(() => ReturnDate);
+                }
+            }
         }
 
     }
