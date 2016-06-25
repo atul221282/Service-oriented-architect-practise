@@ -51,7 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarRentalModel.cs" />
+    <Compile Include="CarRentalContext.cs" />
+    <Compile Include="Configuration\CarConfiguration.cs" />
+    <Compile Include="Data Repositories\AccountRepository.cs" />
+    <Compile Include="DataRepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +62,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarRental.Data.Contracts\CarRental.Data.Contracts.csproj">
+      <Project>{85C0BA94-770B-454D-88F8-31512F1AB9CA}</Project>
+      <Name>CarRental.Data.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core.Common.Contract\Core.Common.Contracts.csproj">
       <Project>{FB984039-658F-48E8-BC4E-5971F276B091}</Project>
       <Name>Core.Common.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{8D8D95A3-0CDE-4D48-8EE8-21830B89D2BA}</Project>
+      <Name>Core.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\SOA.Business.Entities\CarRental.Business.Entities.csproj">
       <Project>{AB94EF71-93DE-4107-98E6-2A0B17E2E5BB}</Project>

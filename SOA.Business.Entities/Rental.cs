@@ -24,14 +24,13 @@ namespace CarRental.Business.Entities
         [DataMember]
         public DateTimeOffset? Datereturned { get; set; }
       
-        long IAccountOwnedEntity.OwnerAccount
+
+        public long? OwnerAccount
         {
             get
             {
-                return AccountId;
+                return Id;
             }
-
-           
         }
     }
 }

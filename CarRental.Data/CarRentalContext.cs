@@ -1,7 +1,9 @@
 namespace CarRental.Data
 {
     using Business.Entities;
+    using Configuration;
     using Core.Common.Contracts;
+    using Core.Common.Core;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration.Conventions;
@@ -18,6 +20,7 @@ namespace CarRental.Data
         public CarRentalContext()
             : base("name=CarRental")
         {
+            Database.SetInitializer<CarRentalContext>(null);
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
@@ -28,10 +31,15 @@ namespace CarRental.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Ignore<ExtensionDataObject>();
             modelBuilder.Ignore<IIdentifiableEntity>();
+            modelBuilder.Entity<EntityBase>().HasKey(t => t.Id).Ignore(x=>x.EntityId);
+
+            modelBuilder.Configurations.Add(new CarConfiguration());
+
         }
     }
 

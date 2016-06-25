@@ -16,17 +16,18 @@ namespace CarRental.Business.Entities
         public long AccountId { get; set; }
         [DataMember]
         public long CarId { get; set; }
+
+        public long? OwnerAccount
+        {
+            get
+            {
+                return Id;
+            }
+        }
+
         [DataMember]
         public DateTimeOffset RentalDate { get; set; }
         [DataMember]
         public DateTimeOffset ReturnDate { get; set; }
-
-        long IAccountOwnedEntity.OwnerAccount
-        {
-            get
-            {
-                return AccountId;
-            }
-        }
     }
 }
