@@ -1,10 +1,13 @@
 ﻿using CarRental.Business.Entities;
 using CarRental.Data.Contracts;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 
 namespace CarRental.Data.Data_Repositories
 {
+    [Export(typeof(IAccountRepository))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
     public class AccountRepository : DataRepositoryBase<Account>, IAccountRepository
     {
         protected override Account AddEntity(CarRentalContext entityContext, Account entity)

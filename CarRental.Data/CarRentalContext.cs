@@ -28,6 +28,12 @@ namespace CarRental.Data
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Account> AccountSet { get; set; }
+        public virtual DbSet<Car> CarSet { get; set; }
+
+        public virtual DbSet<Rental> RentalSet { get; set; }
+
+        public virtual DbSet<Reservation> ReservationSet { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

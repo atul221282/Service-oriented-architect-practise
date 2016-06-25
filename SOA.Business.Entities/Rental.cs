@@ -22,7 +22,7 @@ namespace CarRental.Business.Entities
         [DataMember]
         public DateTimeOffset DateDue { get; set; }
         [DataMember]
-        public DateTimeOffset? Datereturned { get; set; }
+        public DateTimeOffset? DateReturned { get; set; }
       
 
         public long? OwnerAccount

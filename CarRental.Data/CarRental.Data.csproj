@@ -39,6 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -54,6 +55,9 @@
     <Compile Include="CarRentalContext.cs" />
     <Compile Include="Configuration\CarConfiguration.cs" />
     <Compile Include="Data Repositories\AccountRepository.cs" />
+    <Compile Include="Data Repositories\CarRepository.cs" />
+    <Compile Include="Data Repositories\RentalRepository.cs" />
+    <Compile Include="Data Repositories\ReservationRepository.cs" />
     <Compile Include="DataRepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

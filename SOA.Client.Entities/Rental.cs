@@ -65,7 +65,7 @@ namespace CarRental.Client.Entities
                 }
             }
         }
-        public DateTimeOffset? Datereturned
+        public DateTimeOffset? DateReturned
         {
             get { return _dateReturned; }
             set
@@ -73,7 +73,7 @@ namespace CarRental.Client.Entities
                 if (_dateRented != value)
                 {
                     _dateReturned = value;
-                    OnPropertyChanged(() => Datereturned);
+                    OnPropertyChanged(() => DateReturned);
                 }
             }
         }
