@@ -1,5 +1,4 @@
-﻿using Core.Common.Contract;
-using Core.Common.Contracts;
+﻿using Core.Common.Contracts;
 using Core.Common.Utils;
 using System;
 using System.Collections.Generic;

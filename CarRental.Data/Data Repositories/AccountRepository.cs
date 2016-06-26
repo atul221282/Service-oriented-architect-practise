@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 
-namespace CarRental.Data.Data_Repositories
+namespace CarRental.Data
 {
     [Export(typeof(IAccountRepository))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

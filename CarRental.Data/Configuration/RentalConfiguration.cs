@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace CarRental.Data.Configuration
 {
-    public class CarConfiguration : EntityTypeConfiguration<Car>
+    public class RentalConfiguration : EntityTypeConfiguration<Rental>
     {
-        public CarConfiguration()
+        public RentalConfiguration()
         {
             HasKey<long?>(e => e.Id).Ignore(e => e.EntityId);
-            Ignore(x => x.CurrentlyRented);
-            
         }
     }
 }

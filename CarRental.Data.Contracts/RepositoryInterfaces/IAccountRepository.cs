@@ -1,5 +1,5 @@
 ﻿using CarRental.Business.Entities;
-using Core.Common.Contract;
+using Core.Common.Contracts;
 
 namespace CarRental.Data.Contracts
 {

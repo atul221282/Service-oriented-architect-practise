@@ -20,7 +20,7 @@ namespace CarRental.Data
         public CarRentalContext()
             : base("name=CarRental")
         {
-            Database.SetInitializer<CarRentalContext>(null);
+            //Database.SetInitializer<CarRentalContext>(null);
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
@@ -42,9 +42,16 @@ namespace CarRental.Data
 
             modelBuilder.Ignore<ExtensionDataObject>();
             modelBuilder.Ignore<IIdentifiableEntity>();
-            modelBuilder.Entity<EntityBase>().HasKey(t => t.Id).Ignore(x=>x.EntityId);
+
+            modelBuilder.Entity<Account>().HasKey<long?>(e => e.Id).Ignore(e => e.EntityId);
+            modelBuilder.Entity<Car>().HasKey<long?>(e => e.Id).Ignore(e => e.EntityId);
+            
+            modelBuilder.Entity<Reservation>().HasKey<long?>(e => e.Id).Ignore(e => e.EntityId);
+
+            modelBuilder.Configurations.Add(new RentalConfiguration());
 
             modelBuilder.Configurations.Add(new CarConfiguration());
+
 
         }
     }

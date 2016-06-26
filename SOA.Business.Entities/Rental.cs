@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace CarRental.Business.Entities
 {
     [DataContract]
-    public class Rental : EntityBase, IIdentifiableEntity,IAccountOwnedEntity
+    public class Rental : EntityBase, IIdentifiableEntity, IAccountOwnedEntity
     {
-     
+
         [DataMember]
         public long AccountId { get; set; }
         [DataMember]
@@ -23,7 +23,7 @@ namespace CarRental.Business.Entities
         public DateTimeOffset DateDue { get; set; }
         [DataMember]
         public DateTimeOffset? DateReturned { get; set; }
-      
+
 
         public long? OwnerAccount
         {
