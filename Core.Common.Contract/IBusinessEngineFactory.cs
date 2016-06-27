@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Common.Contracts
+namespace Core.Common.Contract
 {
-    public interface IAccountOwnedEntity
+    public interface  IBusinessEngineFactory
     {
-        long? OwnerAccountId { get; }
+        T GetBusinessEngine<T>() where T : IBusinessEngine;
     }
 }

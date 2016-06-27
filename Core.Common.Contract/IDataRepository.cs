@@ -16,12 +16,12 @@ namespace Core.Common.Contracts
 
         void Remove(T entity);
 
-        void Remove(int id);
+        void Remove(long? id);
 
         T Update(T entity);
 
         IEnumerable<T> Get();
 
-        T Get(int id);
+        T Get(long? id);
     }
 }

@@ -30,7 +30,7 @@ namespace CarRental.Data
                    select e;
         }
 
-        protected override Rental GetEntity(CarRentalContext entityContext, int id)
+        protected override Rental GetEntity(CarRentalContext entityContext, long? id)
         {
             var query = (from e in entityContext.RentalSet
                          where e.Id == id
@@ -41,7 +41,7 @@ namespace CarRental.Data
             return results;
         }
 
-        public IEnumerable<Rental> GetRentalHistoryByCar(int carId)
+        public IEnumerable<Rental> GetRentalHistoryByCar(long? carId)
         {
             using (CarRentalContext entityContext = new CarRentalContext())
             {
@@ -53,7 +53,7 @@ namespace CarRental.Data
             }
         }
 
-        public Rental GetCurrentRentalByCar(int carId)
+        public Rental GetCurrentRentalByCar(long? carId)
         {
             using (CarRentalContext entityContext = new CarRentalContext())
             {
@@ -77,7 +77,7 @@ namespace CarRental.Data
             }
         }
 
-        public IEnumerable<Rental> GetRentalHistoryByAccount(int accountId)
+        public IEnumerable<Rental> GetRentalHistoryByAccount(long? accountId)
         {
             using (CarRentalContext entityContext = new CarRentalContext())
             {
@@ -107,5 +107,6 @@ namespace CarRental.Data
                 return query.ToFullyLoaded();
             }
         }
+
     }
 }

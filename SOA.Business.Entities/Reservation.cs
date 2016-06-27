@@ -17,7 +17,7 @@ namespace CarRental.Business.Entities
         [DataMember]
         public long CarId { get; set; }
 
-        public long? OwnerAccount
+        public long? OwnerAccountId
         {
             get
             {

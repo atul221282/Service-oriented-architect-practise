@@ -25,7 +25,7 @@ namespace CarRental.Business.Entities
         public DateTimeOffset? DateReturned { get; set; }
 
 
-        public long? OwnerAccount
+        public long? OwnerAccountId
         {
             get
             {

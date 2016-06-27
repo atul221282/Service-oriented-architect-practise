@@ -11,6 +11,6 @@ namespace CarRental.Data.Contracts
     {
         IEnumerable<Reservation> GetReservationsByPickupDate(DateTime pickupDate);
         IEnumerable<CustomerReservationInfo> GetCurrentCustomerReservationInfo();
-        IEnumerable<CustomerReservationInfo> GetCustomerOpenReservationInfo(int accountId);
+        IEnumerable<CustomerReservationInfo> GetCustomerOpenReservationInfo(long? accountId);
     }
 }

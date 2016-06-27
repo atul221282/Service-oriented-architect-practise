@@ -30,7 +30,7 @@ namespace CarRental.Data
                    select e;
         }
 
-        protected override Reservation GetEntity(CarRentalContext entityContext, int id)
+        protected override Reservation GetEntity(CarRentalContext entityContext, long? id)
         {
             var query = (from e in entityContext.ReservationSet
                          where e.Id == id
@@ -71,7 +71,7 @@ namespace CarRental.Data
             }
         }
 
-        public IEnumerable<CustomerReservationInfo> GetCustomerOpenReservationInfo(int accountId)
+        public IEnumerable<CustomerReservationInfo> GetCustomerOpenReservationInfo(long? accountId)
         {
             using (CarRentalContext entityContext = new CarRentalContext())
             {

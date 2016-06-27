@@ -30,7 +30,7 @@ namespace CarRental.Data
                    select e;
         }
 
-        protected override Car GetEntity(CarRentalContext entityContext, int id)
+        protected override Car GetEntity(CarRentalContext entityContext, long? id)
         {
             var query = (from e in entityContext.CarSet
                          where e.Id == id

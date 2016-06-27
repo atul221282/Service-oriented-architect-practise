@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CarRental.Business.Entities;
 using CarRental.Business.Bootstrapper;
 using Moq;
+using Core.Common.Contracts;
 
 namespace CarRental.Data.Tests
 {
@@ -48,6 +49,46 @@ namespace CarRental.Data.Tests
             Assert.IsTrue(ret == cars);
         }
 
+        [TestMethod]
+        public void test_factory_mocking1()
+        {
+            List<Car> cars = new List<Car>()
+            {
+                new Car() { Id = 1, Description = "Mustang" },
+                new Car() { Id = 2, Description = "Corvette" }
+            };
+
+            Mock<IDataRepositoryFactory> mockDataRepository = new Mock<IDataRepositoryFactory>();
+            mockDataRepository.Setup(obj => obj.GetDataRepository<ICarRepository>().Get()).Returns(cars);
+
+            RepositoryFactoryTestClass factoryTest = new RepositoryFactoryTestClass(mockDataRepository.Object);
+
+            IEnumerable<Car> ret = factoryTest.GetCars();
+
+            Assert.IsTrue(ret == cars);
+        }
+
+        [TestMethod]
+        public void test_factory_mocking2()
+        {
+            List<Car> cars = new List<Car>()
+            {
+                new Car() { Id = 1, Description = "Mustang" },
+                new Car() { Id = 2, Description = "Corvette" }
+            };
+
+            Mock<ICarRepository> mockCarRepository = new Mock<ICarRepository>();
+            mockCarRepository.Setup(obj => obj.Get()).Returns(cars);
+
+            Mock<IDataRepositoryFactory> mockDataRepository = new Mock<IDataRepositoryFactory>();
+            mockDataRepository.Setup(obj => obj.GetDataRepository<ICarRepository>()).Returns(mockCarRepository.Object);
+
+            RepositoryFactoryTestClass factoryTest = new RepositoryFactoryTestClass(mockDataRepository.Object);
+
+            IEnumerable<Car> ret = factoryTest.GetCars();
+
+            Assert.IsTrue(ret == cars);
+        }
     }
 
     public class RepositoryTestClass
@@ -73,4 +114,30 @@ namespace CarRental.Data.Tests
 
         }
     }
+
+    public class RepositoryFactoryTestClass
+    {
+        public RepositoryFactoryTestClass()
+        {
+            ObjectBase.Container.SatisfyImportsOnce(this);
+        }
+
+        public RepositoryFactoryTestClass(IDataRepositoryFactory dataRepositoryFactory)
+        {
+            _DataRepositoryFactory = dataRepositoryFactory;
+        }
+
+        [Import]
+        IDataRepositoryFactory _DataRepositoryFactory;
+
+        public IEnumerable<Car> GetCars()
+        {
+            ICarRepository carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
+
+            IEnumerable<Car> cars = carRepository.Get();
+
+            return cars;
+        }
+    }
+
 }

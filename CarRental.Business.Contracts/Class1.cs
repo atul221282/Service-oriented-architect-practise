@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Common.Contracts
+namespace CarRental.Business.Contracts
 {
-    public interface IAccountOwnedEntity
+    public class Class1
     {
-        long? OwnerAccountId { get; }
     }
 }

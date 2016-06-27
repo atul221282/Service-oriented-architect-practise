@@ -6,11 +6,11 @@ using System.Runtime.Serialization;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CarRental.Business.Entities")]
+[assembly: AssemblyTitle("CarRental.Business.Contracts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CarRental.Business.Entities")]
+[assembly: AssemblyProduct("CarRental.Business.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Runtime.Serialization;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ab94ef71-93de-4107-98e6-2a0b17e2e5bb")]
+[assembly: Guid("a272effd-f5a6-44d1-830f-ca334bcb0732")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -37,4 +37,4 @@ using System.Runtime.Serialization;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 //This is to avoid decorating SOA.Client.Entities with DataContract but still make it serializable
-[assembly: ContractNamespace("http://localhost/SOA", ClrNamespace = "CarRental.Business.Entities")]
+[assembly: ContractNamespace("http://localhost/SOA", ClrNamespace = "CarRental.Business.Contracts")]

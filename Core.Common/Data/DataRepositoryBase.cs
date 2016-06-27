@@ -17,7 +17,7 @@ namespace Core.Common.Data
 
         protected abstract IEnumerable<T> GetEntities(U entityContext);
 
-        protected abstract T GetEntity(U entityContext, int id);
+        protected abstract T GetEntity(U entityContext, long? id);
 
         public T Add(T entity)
         {
@@ -38,7 +38,7 @@ namespace Core.Common.Data
             }
         }
 
-        public void Remove(int id)
+        public void Remove(long? id)
         {
             using (U entityContext = new U())
             {
@@ -67,7 +67,7 @@ namespace Core.Common.Data
                 return (GetEntities(entityContext)).ToArray().ToList();
         }
 
-        public T Get(int id)
+        public T Get(long? id)
         {
             using (U entityContext = new U())
                 return GetEntity(entityContext, id);

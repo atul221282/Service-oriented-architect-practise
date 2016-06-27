@@ -29,7 +29,7 @@ namespace CarRental.Business.Entities
         [DataMember]
         public DateTimeOffset? ExpiryDate { get; set; }
 
-        public long? OwnerAccount
+        public long? OwnerAccountId
         {
             get
             {

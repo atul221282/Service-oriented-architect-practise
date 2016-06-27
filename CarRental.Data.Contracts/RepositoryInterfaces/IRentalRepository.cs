@@ -9,10 +9,10 @@ namespace CarRental.Data.Contracts
 {
     public interface IRentalRepository : IDataRepository<Rental>
     {
-        IEnumerable<Rental> GetRentalHistoryByCar(int carId);
-        Rental GetCurrentRentalByCar(int carId);
+        IEnumerable<Rental> GetRentalHistoryByCar(long? carId);
+        Rental GetCurrentRentalByCar(long? carId);
         IEnumerable<Rental> GetCurrentlyRentedCars();
-        IEnumerable<Rental> GetRentalHistoryByAccount(int accountId);
+        IEnumerable<Rental> GetRentalHistoryByAccount(long? accountId);
         IEnumerable<CustomerRentalInfo> GetCurrentCustomerRentalInfo();
     }
 }
