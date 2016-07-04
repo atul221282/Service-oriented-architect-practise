@@ -36,5 +36,5 @@ using System.Runtime.Serialization;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-//This is to avoid decorating SOA.Client.Entities with DataContract but still make it serializable
+//This is to avoid decorating CarRental.Client.Entities with DataContract but still make it serializable
 [assembly: ContractNamespace("http://localhost/SOA", ClrNamespace = "CarRental.Business.Entities")]

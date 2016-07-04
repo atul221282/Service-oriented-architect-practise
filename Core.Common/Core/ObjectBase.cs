@@ -97,6 +97,7 @@ namespace Core.Common.Core
 
 
         protected bool _IsDirty = false;
+
         protected IValidator _Validator = null;
 
         protected IEnumerable<ValidationFailure> _ValidationErrors = null;

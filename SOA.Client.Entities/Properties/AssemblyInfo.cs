@@ -6,11 +6,11 @@ using System.Runtime.Serialization;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SOA.Client.Entities")]
+[assembly: AssemblyTitle("CarRental.Client.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SOA.Client.Entities")]
+[assembly: AssemblyProduct("CarRental.Client.Entities")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -36,5 +36,5 @@ using System.Runtime.Serialization;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-//This is to avoid decorating SOA.Client.Entities with DataContract but still make it serializable
+//This is to avoid decorating CarRental.Client.Entities with DataContract but still make it serializable
 [assembly: ContractNamespace("http://localhost/SOA", ClrNamespace = "CarRental.Business.Entities")]
