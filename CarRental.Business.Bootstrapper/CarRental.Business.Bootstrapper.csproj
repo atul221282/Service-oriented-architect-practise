@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CarRental.Client.Proxies\CarRental.Client.Proxies.csproj">
+      <Project>{544A1A29-94E5-4C17-BBC2-B031BC19DD1E}</Project>
+      <Name>CarRental.Client.Proxies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CarRental.Data\CarRental.Data.csproj">
       <Project>{B0A94A51-3ED5-425E-A2C3-705E625E8A76}</Project>
       <Name>CarRental.Data</Name>

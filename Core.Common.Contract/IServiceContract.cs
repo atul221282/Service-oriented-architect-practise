@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarRental.Data.Contracts
+namespace Core.Common.Contract
 {
-    public class Class1
+    public interface IServiceContract
     {
     }
 }

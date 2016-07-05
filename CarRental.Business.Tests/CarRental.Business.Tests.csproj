@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57BA9714-12F2-4F86-A783-71E3C4A92D5C}</ProjectGuid>
+    <ProjectGuid>{DA429387-9FD6-4989-87C5-4DDDD155FE31}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Business.Managers.Tests</RootNamespace>
-    <AssemblyName>CarRental.Business.Managers.Tests</AssemblyName>
+    <RootNamespace>CarRental.Business.Tests</RootNamespace>
+    <AssemblyName>CarRental.Business.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -44,6 +44,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -58,16 +59,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="InventoryManagerTests.cs" />
+    <Compile Include="CarRentalEngineTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CarRental.Business.Managers\CarRental.Business.Managers.csproj">
-      <Project>{8F9DC740-21B1-42F9-8B25-663D2E07F147}</Project>
-      <Name>CarRental.Business.Managers</Name>
+    <ProjectReference Include="..\CarRental.Business.Common\CarRental.Business.Common.csproj">
+      <Project>{4b3191a5-eda2-4285-b4a2-e995c9c23846}</Project>
+      <Name>CarRental.Business.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Business\CarRental.Business.csproj">
+      <Project>{2b7a6371-34cb-48b1-94ab-9dc4106f9fdb}</Project>
+      <Name>CarRental.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CarRental.Common\CarRental.Common.csproj">
+      <Project>{ed70a811-2084-414a-a31f-3bdad5b4d958}</Project>
+      <Name>CarRental.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\CarRental.Data.Contracts\CarRental.Data.Contracts.csproj">
-      <Project>{85C0BA94-770B-454D-88F8-31512F1AB9CA}</Project>
+      <Project>{85c0ba94-770b-454d-88f8-31512f1ab9ca}</Project>
       <Name>CarRental.Data.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core.Common.Contract\Core.Common.Contracts.csproj">
@@ -75,11 +84,11 @@
       <Name>Core.Common.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core.Common\Core.Common.csproj">
-      <Project>{8D8D95A3-0CDE-4D48-8EE8-21830B89D2BA}</Project>
+      <Project>{8d8d95a3-0cde-4d48-8ee8-21830b89d2ba}</Project>
       <Name>Core.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\SOA.Business.Entities\CarRental.Business.Entities.csproj">
-      <Project>{AB94EF71-93DE-4107-98E6-2A0B17E2E5BB}</Project>
+      <Project>{ab94ef71-93de-4107-98e6-2a0b17e2e5bb}</Project>
       <Name>CarRental.Business.Entities</Name>
     </ProjectReference>
   </ItemGroup>
